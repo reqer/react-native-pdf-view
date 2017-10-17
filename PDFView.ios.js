@@ -1,5 +1,6 @@
 'use strict';
-import React,{ Component, PropTypes } from 'react';
+import React,{ Component } from 'react';
+import PropTypes from 'prop-types';
 import { requireNativeComponent, View } from 'react-native';
 
 class PDFView extends Component {
@@ -12,7 +13,7 @@ class PDFView extends Component {
     this._root.setNativeProps(nativeProps);
   }
 
-  _onChange(event:Event) {
+  _onChange(event) {
     this.props.onLoadComplete && this.props.onLoadComplete(Number(event.nativeEvent.message));
   }
 
